@@ -56,4 +56,4 @@ function Profile(props) {
   );
 }
 
-export default Profile;6
+export default Profile;

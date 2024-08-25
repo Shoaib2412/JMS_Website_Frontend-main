@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Avatar from '@mui/material/Avatar';
 
+
 function Index(props) {
   const [Name, setName] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,11 +59,11 @@ function Index(props) {
         <div className="">Jadavpur University Mathematics Soceity</div>
       </div>
       <div className="hidden md:flex items-center justify-center gap-10">
-        <div className=" cursor-pointer">Home</div>
-        <div className=" cursor-pointer">About Us</div>
-        <div className=" cursor-pointer">Library</div>
-        <div className=" cursor-pointer">Rules</div>
-        <div className=" cursor-pointer">Admins</div>
+        <div className="cursor-pointer hover:border-b-2 hover:border-white hover:pb-1"><a href="/">Home</a></div>
+        <div className="cursor-pointer hover:border-b-2 hover:border-white hover:pb-1"><a href="#about">About Us</a></div>
+        <div className="cursor-pointer hover:border-b-2 hover:border-white hover:pb-1">Library</div>
+        <div className="cursor-pointer hover:border-b-2 hover:border-white hover:pb-1">Rules</div>
+        <div className="cursor-pointer hover:border-b-2 hover:border-white hover:pb-1">Admins</div>
         <div
           className={` cursor-pointer ${
             props.auth === true ? "none" : "hidden"
@@ -72,10 +73,10 @@ function Index(props) {
         </div>
       </div>
       <div className="hidden md:flex items-center gap-14 justify-center">
-        <div className="cursor-pointer">
+        <div className="cursor-pointer cursor-pointer hover:border-b-2 hover:border-white hover:pb-1">
           <a href="/login">Login</a>
         </div>
-        <div className=" cursor-pointer" onClick={handlelogout}>
+        <div className=" cursor-pointer cursor-pointer hover:border-b-2 hover:border-white hover:pb-1" onClick={handlelogout}>
           Logout
         </div>
       </div>
@@ -89,22 +90,22 @@ function Index(props) {
       <div className={`fixed top-0 right-0 h-full bg-[#3d0f5a] text-white p-6 md:hidden transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} w-1/2`}>
         <button onClick={() => setIsMenuOpen(false)} className="absolute top-4 right-4 text-2xl">&times;</button>
         <div className="flex flex-col items-center gap-6 mt-10">
-          <div className="cursor-pointer">Home</div>
-          <div className="cursor-pointer">About Us</div>
-          <div className="cursor-pointer">Library</div>
-          <div className="cursor-pointer">Rules</div>
-          <div className="cursor-pointer">Admins</div>
+          <div className="cursor-pointer hover:border-b-2 hover:border-white hover:pb-1"><a href="/">Home</a></div>
+          <div className="cursor-pointer hover:border-b-2 hover:border-white hover:pb-1"><a href="#about">About Us</a></div>
+          <div className="cursor-pointer hover:border-b-2 hover:border-white hover:pb-1">Library</div>
+          <div className="cursor-pointer hover:border-b-2 hover:border-white hover:pb-1">Rules</div>
+          <div className="cursor-pointer hover:border-b-2 hover:border-white hover:pb-1">Admins</div>
           <div
           className={` cursor-pointer ${
             props.auth === true ? "none" : "hidden"
           }`}
-         >
-          <a href="/profiles"><Avatar sx={{ bgcolor: 'primary.main' }}>{Name[0]}</Avatar></a>
-        </div>
-          <div className="cursor-pointer">
+          >
+            <a href="/profiles"><Avatar sx={{ bgcolor: 'primary.main' }}>{Name[0]}</Avatar></a>
+          </div>
+          <div className="cursor-pointer hover:border-b-2 hover:border-white hover:pb-1">
             <a href="/login">Login</a>
           </div>
-          <div className="cursor-pointer" onClick={handlelogout}>
+          <div className="cursor-pointer hover:border-b-2 hover:border-white hover:pb-1" onClick={handlelogout}>
             Logout
           </div>
         </div>

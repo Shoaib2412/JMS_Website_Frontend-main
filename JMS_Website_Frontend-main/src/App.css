@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-offset {
+    scroll-margin-top: 100px; /* Adjust this value based on how much gap you want */
+}

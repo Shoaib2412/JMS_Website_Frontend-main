@@ -9,6 +9,7 @@ import Part2 from "./Components/Part2";
 import Register from "./Components/Signup";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Profile from "./Components/Profile";
+import QueryBox from "./Components/QueryBox";
 
 function App() {
   const [details, setdetails] = useState({})
@@ -59,6 +60,7 @@ function App() {
         <>
           <Part1 />
           <Part2 />
+          <QueryBox/>
           <Footer />
         </>
       ),
